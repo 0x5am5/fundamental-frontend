@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      My First Website
+    </title>
+  </head>
+  <body itemscope itemtype="https://schema.org/Person"> //This can't be used for two people but we didn't tell you to only write for one person beforehand so this is our bad
+    <header>
+        <a href="#maincontent"> Skip to content</a>
+      <nav>
+          <a href="#">Home</a> |
+          <a href="#">Contact</a>
+      </nav>
+      
+    <h1><div itemProp="name">Name: Olamide & Alex</div> //Name should go out of the itemProp here (maybe bring the names into a span)
+    <div itemProp ="jobTitle"> Job title: Superheroes</div> // Same as above
+    <div itemProp ="worksFor"> Company: AND Digital</div> // Same as above
+      
+    </h1>
+    </header>
+  <main id="maincontent">
+    <figure>
+      <img src="images/cropped AND photo.png" alt="Professional picture" height="120" width="120"> // Sidenote - if you just use height/width here it will automatically scale the other dimension which means it won't potentially skew the picture like it might here
+      <figcaption>A really good picture</figcaption>
+    </figure>
+    
+    <section>
+        <h2>About</h2>
+        <h3>I am a superdev with astonishing java superpowers. :heart: Dekker</h3> //This isn't a heading - probably a paragraph
+    </section>
+     
+    <section>
+    <h2> My personal interests</h2>
+      <h3>I love adventures (all sorts), books (good ones only) and running (fast!). </h3> // Same as above
+    </section>
+    <section>
+      <h2> 
+        Contact me
+      </h2>
+      
+      <a href="mailto:oabolarinwa@and.digital" itemprop="email">My Email: oabolarinwa@and.digital</a>
+      
+      <form action="" method="post">
+​
+          <label for="Name">Your name *</label>
+          <input type="text" name="name" required id="Name">
+          <label for="Email">Your email address *</label>
+          <input type="text" name="email address" required id="Email">//It might be hard to work with this data in JS or the backend if it has a space in the name
+          <label for ="Occupation">Occupation *</label>
+          <input list="Occupation list" required id="Occupation"> 
+          <datalist id="Occupation list"> // Shouldn't have spaces in IDs
+           <option value="Analyst">
+           <option value="Developer">
+          
+          </datalist>
+           <h3>Is KFC the best restaurant in the universe?</h3> // Could use a fieldset here
+           <input type="radio" name="Opinion" value="Yes!" checked> Yes<br>
+           <input type="radio" name="Opinion" value="Definitely!"> Definitely<br>
+           <button type="submit"> Submit</button>
+      </form>
+    </section>
+    <aside>
+      <h1> My social profiles</h1>
+      <ul>
+        <li>
+        <a href="http://www.linkedin.com/"> LinkedIn</a>
+        </li>
+        <li>
+        <a href="http://github.com/"> GitHub</a>
+        </li>
+      </ul> 
+    </aside>
+  </main>
+    <footer>© KFC</footer>
+  </body>
+</html>
